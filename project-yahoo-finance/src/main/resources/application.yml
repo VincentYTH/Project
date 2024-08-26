@@ -1,0 +1,38 @@
+server:
+  port: 9003
+
+api:
+  yahoo-finance:
+    domain: "query1.finance.yahoo.com"
+    cookie: "A1=d=AQABBCKramYCEBHnuxjOUH2btqIw2fCWFdIFEgEBAQH8a2Z0Zlig8HgB_eMAAA&S=AQAAAhelrk5dG-R6Woz13JQDd9w; A3=d=AQABBCKramYCEBHnuxjOUH2btqIw2fCWFdIFEgEBAQH8a2Z0Zlig8HgB_eMAAA&S=AQAAAhelrk5dG-R6Woz13JQDd9w; A1S=d=AQABBCKramYCEBHnuxjOUH2btqIw2fCWFdIFEgEBAQH8a2Z0Zlig8HgB_eMAAA&S=AQAAAhelrk5dG-R6Woz13JQDd9w; PRF=t%3DSPY; cmp=t=1718266663&j=0&u=1---; gpp=DBAA; gpp_sid=-1; axids=gam=y-Ltc0F7NE2uLtAKdI9lta3DPO92_I4b8v~A&dv360=eS1aTWx0SmtSRTJ1SFZRdE81cUxsRmx3OUpLWHJvb1ExUn5B&ydsp=y-fjYbwZdE2uLK_oPNHGJttbEogz6BR4EB~A&tbla=y-2pfl.sJE2uIa1wvXGYqSTGVyL18P_sag~A; tbla_id=90760d2d-ca55-4fdc-b8fb-b0405bb0fc2d-tuctcc50228"
+
+# database:
+#   db-name: yahoofinance
+
+# spring:
+#   datasource:
+#     # MYSQL
+#     driverClassName: com.mysql.cj.jdbc.Driver
+#     url: jdbc:mysql://127.0.0.1:3306/${database.db-name}
+#     username: root
+#     password: admin1234
+#   jpa:
+#     database-platform: org.hibernate.dialect.MySQL8Dialect
+
+database:
+  db-name: "db_2403"
+
+spring:
+  datasource:
+    # Postgresql
+    driverClassName: "org.postgresql.Driver"
+    url: "jdbc:postgresql://localhost:5432/${database.db-name}"
+    username: "postgres"
+    password: "1234"
+
+spring.jpa:
+  show-sql: false
+  hibernate.ddl-auto: update # update
+  # Hibernate ddl auto (create, create-drop, validate, update)
+
+
